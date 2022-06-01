@@ -11,16 +11,18 @@ int main() {
    while (EOF != (caracter=getchar())){
       if (isupper(caracter)){
          caracter = tolower(caracter);
-         goto salida;
+         putchar (caracter);
       }
-      if (islower(caracter)){
+      else if (islower(caracter)){
          caracter = toupper(caracter);
+         putchar (caracter);
       }
-      if (isdigit(caracter)){
-         caracter = '\0';
+      else if (isdigit(caracter)){
+         caracter;
       }
-      salida:
-      putchar (caracter);
+      else {
+         putchar (caracter);
+      }
    }
 
    return 0;
